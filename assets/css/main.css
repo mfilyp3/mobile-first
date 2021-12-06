@@ -1,0 +1,322 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  text-rendering: auto;
+}
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --wordRed: hsl(15, 100%, 70%);
+  --playBlue: hsl(195, 74%, 62%);
+  --studyRed: hsl(348, 100%, 68%);
+  --exerciseGreen: hsl(145, 58%, 55%);
+  --socialViolet: hsl(264, 64%, 52%);
+  --selfCare: hsl(43, 84%, 65%);
+
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+
+  --fontSize: 18px;
+}
+
+body,
+html {
+  background-color: var(--veryDarkBlue);
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+section {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+section.main-card {
+  width: auto;
+  background-color: var(--darkBlue);
+}
+
+section.main-card header {
+  background-color: var(--blue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 1.5rem;
+
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 40;
+}
+
+section.main-card .content {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+section figure img {
+  width: auto;
+  height: 80px;
+  border: 2px solid white;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+section.cards {
+  position: relative;
+  margin-bottom: 6.5rem;
+}
+
+section.cards .content {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  background-color: var(--darkBlue);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  top: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+section.cards header.preview figure {
+  background-color: var(--wordRed);
+  height: 40px;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px 10px 0 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  -ms-border-radius: 10px 10px 0 0;
+  -o-border-radius: 10px 10px 0 0;
+}
+
+#play {
+  background-color: var(--playBlue);
+}
+#study {
+  background-color: var(--studyRed);
+}
+#exercise {
+  background-color: var(--exerciseGreen);
+}
+#social {
+  background-color: var(--socialViolet);
+}
+#self-care {
+  background-color: var(--selfCare);
+}
+section.cards header.preview figure img {
+  border: none;
+  width: auto;
+  height: 40px;
+}
+
+span {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+small {
+  font-size: 1vh;
+}
+
+button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+
+  opacity: 0.4;
+  outline: none;
+}
+
+button.active {
+  opacity: 1;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1020px) {
+  body,
+  html {
+    background-color: var(--veryDarkBlue);
+  }
+
+  main {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  section {
+    width: 100%;
+  }
+
+  section figure img {
+    width: auto;
+    height: 40px;
+  }
+
+  section.main-card header {
+    width: 100%;
+  }
+
+  section.main-card .content {
+    padding: 1rem 4rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  button:not(:first-child) {
+    margin-left: 2rem;
+  }
+
+  .details {
+    margin-left: 17px;
+  }
+
+  .details span {
+    font-size: 12px;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  section.cards {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  body {
+    width: auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-areas:
+      "A A B C D"
+      "A A E F G"
+      "A A . . .";
+    grid-template-columns: 1fr repeat(4, 180px);
+    grid-template-rows: 1fr 1fr 0fr;
+    gap: 3rem 1rem;
+  }
+
+  section.main-card header {
+    height: 250px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  section .content {
+    height: 99%;
+  }
+
+  #gridA {
+    grid-area: A;
+    width: 100%;
+    height: 100%;
+  }
+  #gridB {
+    grid-area: B;
+    width: 100%;
+    height: 100%;
+  }
+
+  #gridC {
+    grid-area: C;
+    width: 100%;
+    height: 100%;
+  }
+
+  #gridD {
+    grid-area: D;
+    width: 100%;
+    height: 100%;
+  }
+
+  #gridE {
+    grid-area: E;
+    width: 100%;
+    height: 100%;
+  }
+  #gridF {
+    grid-area: F;
+    width: 100%;
+    height: 100%;
+  }
+  #gridG {
+    grid-area: G;
+    width: 100%;
+    height: 100%;
+  }
+
+  .left h2 {
+    margin-top: 1.5rem;
+  }
+  .right small {
+    display: none;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  button {
+    padding: 0.8rem;
+  }
+}
